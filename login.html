@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DIM</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!--Bootstrap CSS-->
     <link rel=”stylesheet”
     href=”https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css”rel=”nofollow”
@@ -26,26 +28,31 @@
                 <li><a href="home.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="support.html">Contacts</a></li>
                 <button><a href="login.html">Login</a></button>
             </u>
         </div>
     </nav>
     <sector class="sectlog">
         <div class="wrapper">
-            <form>
+            <div id="error"></div>
+            <form id="signin">
                 <h2>Sign In</h2>
                 <div class="inputbox1">
-                    <label>Email</label>
-                    <input id="email"/>
+                    <label class="formlabel">Username/Email</label>
+                    <input id="userid" name="userid">
                 </div>
                 <div class="inputbox1">
-                    <label>Password</label>
-                    <input id="password"/>
+                    <label class="formlabel">Password</label>
+                    <input id="password" name="password">
                 </div>
+                <div>
+                    <button class="selectib" id="binv">Investors</button>
+                    <button class="selectib" id="bent">Businesses</button>
+                </div>
+                <button class="enter">Sign In</button>
             </form>
         </div>
     </sector>
-    <script href="script_login.js"></script>
 </body>
 </html>
