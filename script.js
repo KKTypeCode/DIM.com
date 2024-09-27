@@ -43,7 +43,7 @@ login.addEventListener('submit', (e) => {
     }
 
     if ((msg1.length + msg2.length + msg3.length) === 0) {
-        window.location.href = 'home.html'
+        console.log('entered')
     } else {
         e.preventDefault()
         error1.innerHTML = msg1
