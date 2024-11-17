@@ -17,7 +17,67 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
     <style>
-		
+		.form-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .second-method {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .connect-to-btn {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .formlabel {
+            font-weight: 400;
+            font-size: medium;
+            margin-top: 7.5px;
+            margin-bottom: 3px;
+            text-align: left;
+        }
+        .inputbox1 {
+            font-weight: 400;
+            font-size: medium;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        .radio-select {
+            font-weight: 400;
+            font-size: medium;
+            text-align: left;
+            margin-bottom: 0;
+        }
+        .btn {
+           margin-bottom: 10px;
+        }
+        .errormsg {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .sign-up-anchor a {
+            color: #000000;
+            font-weight: 550;
+            text-decoration: none;
+            margin: 30px 0 auto;
+        }
     </style>
 </head>
 <body>
@@ -45,34 +105,42 @@
                 </li>
             </ul>
         </div>
-    </nav>    
-    <section class="sectlog">
-        <div class="wrapper">
-            <form id="signin" action="/DIM.com/home.html" method="GET">
-                <h2>Sign In</h2>
-                <label class="formlabel" for="userid">Username/Email</label>
-                <div class="inputbox1">
-                    <input id="userid" type="text" placeholder="Insert username/email">
-                </div>
-                <div id='error1' class="errormsg"></div>
-                <label class="formlabel" for="password">Password</label>
-                <div class="inputbox1">
-                    <input id="password" type="password" placeholder="Insert your password">
-                </div>
-                <div id='error2' class="errormsg"></div>
-                <div>
-                    <input type="radio" id="businesses" name="choice">
-                    <label class="formchoice" for="businesses">Businesses</label>
-                </div>
-                <div>
-                    <input type="radio" id="investors" name="choice">
-                    <label class="formchoice" for="investors">Investors</label>
-                </div>
-                <div id='error3' class="errormsg"></div>
-                <button type='submit'>Sign In</button>
-            </form>
-            <div><a href="signup.html">Or do you want to sign up?</a></div>
-        </div>
-    </section>
+    </nav>
+    <div class="form-block">
+        <form class="" id="signin" action="/DIM.com/home.html" method="GET">
+            <h2>Sign In</h2>
+            <div class="second-method">
+                <button href="DIM.com/market.html" class="connect-to-btn">
+                    <img src="gmail logo.png" alt="gmail">
+                    <h6>Gmail</h6>
+                </button>
+                <button href="DIM.com/market.html" class="connect-to-btn">
+                    <img src="linkedin logo.jpeg" alt="linkedin">
+                    <h6>LinkedIn</h6>
+                </button>
+            </div>
+            <h5 class="formlabel" for="userid" style="margin-top:20px;">Username/Email</h5>
+            <div class="inputbox1">
+                <input id="userid" type="text" placeholder="Insert username/email">
+            </div>
+            <div id='error1' class="errormsg"></div>
+            <h5 class="formlabel" for="password">Password</h5>
+            <div class="inputbox1">
+                <input id="password" type="password" placeholder="Insert your password">
+            </div>
+            <div id='error2' class="errormsg"></div>
+            <div class="radio-select" style="margin-top:5px;">
+                <input type="radio" id="businesses" name="choice">
+                <label class="formchoice" for="businesses">Businesses</label>
+            </div>
+            <div class="radio-select">
+                <input type="radio" id="investors" name="choice">
+                <label class="formchoice" for="investors">Investors</label>
+            </div>
+            <div id='error3' class="errormsg"></div>
+            <button type='submit' class="btn btn-primary">Sign In</button>
+            <div class="sign-up-anchor"><a href="signup.html">Or do you want to sign up?</a></div>
+        </form>
+    </div>
 </body>
 </html>
