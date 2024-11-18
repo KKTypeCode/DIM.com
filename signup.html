@@ -17,7 +17,79 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
     <style>
-		/* PUT CUSTOM STYLES FOR THIS SPECIFIC PAGE HERE */
+        .form-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .second-method {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            max-width: fit-content;
+        }
+        .connect-to-button {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: center;
+            background-color: #6ed86a;
+            color: #ffffff;
+            border: none;
+            margin: 5px 0;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            max-width: 200px;
+            max-height: 100px;
+        }
+        .connect-to-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .formlabel {
+            font-weight: 400;
+            font-size: medium;
+            margin-top: 7.5px;
+            margin-bottom: 3px;
+            text-align: left;
+        }
+        .inputbox1 {
+            font-weight: 400;
+            font-size: medium;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        .radio-select {
+            font-weight: 400;
+            font-size: medium;
+            text-align: left;
+            margin-bottom: 0;
+        }
+        .btn {
+           margin-bottom: 10px;
+        }
+        .errormsg {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .sign-up-anchor a {
+            color: #000000;
+            font-weight: 550;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -27,7 +99,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
                 <li class="nav-item active">
                     <a class="nav-link" href="home.html">Home</a>
                 </li>
@@ -46,6 +118,37 @@
             </ul>
         </div>
     </nav>    
-    /* PUT YOUR CONTENTS HERE */
+    <div class="form-block">
+        <form class="" id="signin" action="/DIM.com/home.html" method="GET">
+            <h2>Sign Up</h2>
+            <div class="second-method">
+                <button href="DIM.com/market.html" class="connect-to-button">
+                    <img src="gmail_logo.png" alt="gmail">
+                    <h6>Gmail</h6>
+                </button>
+                <button href="DIM.com/market.html" class="connect-to-button">
+                    <img src="linkedin_logo.png" alt="linkedin">
+                    <h6>LinkedIn</h6>
+                </button>
+            </div>
+            <h5 class="formlabel" for="usernameup" style="margin-top:20px;">Username</h5>
+            <div class="inputbox1">
+                <input id="usernameup" type="text" placeholder="Enter your username">
+            </div>
+            <div id='error4' class="errormsg"></div>
+            <h5 class="formlabel" for="email">Email</h5>
+            <div class="inputbox1">
+                <input id="usermailup" type="email" placeholder="Insert your email">
+            </div>
+            <div id='error5' class="errormsg"></div>
+            <h5 class="formlabel" for="passwordup">Password</h5>
+            <div class="inputbox1">
+                <input id="passwordup" type="password" placeholder="Set your password">
+            </div>
+            <div id='error6' class="errormsg"></div>
+            <button type='submit' class="btn btn-primary" style="margin:20px auto;">Sign Up</button>
+            <div class="sign-up-anchor"><a href="login.html">Or do you want to sign in?</a></div>
+        </form>
+    </div>
 </body>
 </html>

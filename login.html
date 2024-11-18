@@ -23,7 +23,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            max-width: 400px;
+            max-width: 500px;
             margin: 50px auto;
             padding: 30px;
             background-color: #f2f2f2;
@@ -32,17 +32,30 @@
         }
         .second-method {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            max-width: fit-content;
         }
-        .connect-to-btn {
-            background-color: #007bff;
+        .connect-to-button {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: center;
+            background-color: #6ed86a;
             color: #ffffff;
             border: none;
+            margin: 5px 0;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
+            max-width: 200px;
+            max-height: 100px;
+        }
+        .connect-to-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
         }
         .formlabel {
             font-weight: 400;
@@ -88,9 +101,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="home.html">Home</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="services.html">Services</a>
                 </li>
@@ -110,12 +120,12 @@
         <form class="" id="signin" action="/DIM.com/home.html" method="GET">
             <h2>Sign In</h2>
             <div class="second-method">
-                <button href="DIM.com/market.html" class="connect-to-btn">
-                    <img src="gmail logo.png" alt="gmail">
+                <button href="DIM.com/market.html" class="connect-to-button">
+                    <img src="gmail_logo.png" alt="gmail">
                     <h6>Gmail</h6>
                 </button>
-                <button href="DIM.com/market.html" class="connect-to-btn">
-                    <img src="linkedin logo.jpeg" alt="linkedin">
+                <button href="DIM.com/market.html" class="connect-to-button">
+                    <img src="linkedin_logo.png" alt="linkedin">
                     <h6>LinkedIn</h6>
                 </button>
             </div>
