@@ -222,6 +222,81 @@
             font-weight: 700;
             letter-spacing: 0.8px;
         }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr); 
+            gap: 10px; 
+            padding: 50px;
+        }
+
+        .box {
+            background-color: #444;
+            border: 2px solid #333;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .centered {
+            grid-column: 2; 
+            grid-row: 2/ span 3; 
+            background-color: #555; 
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            
+        }
+        .top-left {
+            grid-column: 1/ span 2;
+            grid-row: 1;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-left: 12%;
+        }
+
+        .top-right {
+            grid-column: 3;
+            grid-row: 1 / span 3;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bottom-left {
+            grid-column: 1;
+            grid-row: 2/ span 4;
+            flex-direction: row;
+        }
+
+        .bottom-right {
+            grid-column: 2 / span 3;
+            grid-row: 4;
+            flex-direction: column;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .highlight {
+            font-weight: bold;
+            font-size: 2em; /* Larger font size for emphasis */
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* Stack boxes on smaller screens */    
+            }
+
+            .centered {
+                grid-column: 1; /* Ensure centered box spans full width */
+                grid-row: 2; /* Place below others */
+            }
+        }
     </style>
 </head>
 <body>
@@ -268,6 +343,23 @@
         <span class="subtitle">Make your mark, set your goals, find your ideas.</span>
         <div class="button entrepreneur">
             <span class="title">Entrepreneur</span>
+        </div>
+    </div>
+    <div class="grid-container">
+        <div class="box top-left">
+            <div class="content">Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform</div>
+        </div>
+        <div class="box top-right">
+            <div class="content">Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform</div>
+        </div>
+        <div class="box centered">
+            <div class="content">With<br><span class="highlight">YOUR</span><br>Contribution</div>
+        </div>
+        <div class="box bottom-left">
+            <div class="content">Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform</div>
+        </div>
+        <div class="box bottom-right">
+            <div class="content">Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform</div>
         </div>
     </div>
 </body>
