@@ -17,7 +17,96 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
     <style>
-		/* PUT CUSTOM STYLES FOR THIS SPECIFIC PAGE HERE */
+        .navbar-brand {
+            padding-left: 15px;
+        }
+        .top-part {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: auto;
+            padding-right: auto;
+        }
+        .title h1 {
+            font-size: 120px;
+            margin: 30px;
+            user-select: none !important;
+        }
+        .search-area {
+            padding: 10px;
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .search-area input {
+            width: 300px;
+            border-radius: 5px;
+        }
+        .input-group .form-control:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        .arrangement {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .business-frame {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            height: 200px;
+        }
+        .business-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .business-top img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+        /* Popup container */
+        .popup {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            width: 300px;
+            text-align: center;
+        }
+        
+        /* Overlay */
+        .overlay {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        
+        /* Close button */
+        .close-btn {
+            margin-top: 15px;
+            cursor: pointer;
+            color: blue;
+        }
     </style>
 </head>
 <body>
@@ -46,6 +135,46 @@
             </ul>
         </div>
     </nav>    
-    /* PUT YOUR CONTENTS HERE */
+    <div class="top-part">
+        <div class="title"><h1>Market Page</h1></div>
+        <div class="search-area">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search businesses..." aria-describedby="button-addon2">
+                <button class="btn btn-outline-primary" type="button" id="button-addon2">Button</button>
+            </div>
+        </div>
+    </div>
+    <div class="arrangement">
+        <!-- Card 1 -->
+        <div class="col-md-3 mb-3 business-frame">
+            <div class="business-top">
+                <h4>Micro-Loans</h4>
+                <img src="logo example.png" alt="Logo">
+            </div>
+            <div class="business-detail">
+                <h6>We provide loans for your businesses or investments with the aim of helping you get started on your financial journey today.</h6>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-3 mb-3 business-frame">
+            <div class="business-top">
+                <h4>Crowdfunds</h4>
+                <img src="logo example.png" alt="Logo">
+            </div>
+            <div class="business-detail">
+                <h6>Get your businesses to be supported by people of your communities or supporting organisations.</h6>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-3 mb-3 business-frame">
+            <div class="business-top">
+                <h4>Business Promotion</h4>
+                <img src="logo example.png" alt="Logo">
+            </div>
+            <div class="business-detail">
+                <h6>Business Details</h6>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
