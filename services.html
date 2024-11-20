@@ -34,7 +34,7 @@
             padding-right: auto;
         }
         .title h1 {
-            font-size: 120px;
+            font-size: 10vw;
             margin: 30px;
             user-select: none !important;
         }
@@ -43,34 +43,56 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 20px;
             margin: 0 auto;
         }
         .business-frame {
             border: 1px solid #ddd;
             padding: 20px;
-            margin-bottom: 20px;
+            margin: 20px;
             text-align: left;
-            min-height: 205px;
+            min-height: 215px;
             max-height: 250px;
+            min-width: 260px;
         }
         .business-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
-        }
-        .desc {
-            margin: 20px auto;
-        }
-        .desc-title {
-            margin: 20px auto;
-            font-size: 45px;
+            margin-top: 7.5px;
+            margin-bottom: 15px;
         }
         .business-top img {
             width: 50px;
             height: 50px;
             object-fit: cover;
+        }
+        .desc {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 20px auto;
+        }
+        .desc-title h2 {
+            margin: 20px;
+            font-size: 65px;
+        }
+        .desc-detail {
+            width: 85%;
+        }
+        .loan-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+        }
+        @media (max-width: 991px) {
+           .arrangement {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -102,7 +124,17 @@
     </div>
     <div class="arrangement">
         <!-- Card 1 -->
-        <div class="col-md-3 mb-3 business-frame">
+        <div class="col-md-3 mb-3 business-frame" style="padding-bottom:8px;">
+            <div class="business-top" style="margin-top: 0px; margin-bottom: 9px;">
+                <h4>Connections & Networking</h4>
+                <img src="logo example.png" alt="Logo">
+            </div>
+            <div class="business-detail">
+                <h6>Start promoting your business and gain greater connections through networking with investors.</h6>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-3 mb-3 business-frame" href="#micro-loan">
             <div class="business-top">
                 <h4>Micro-Loans</h4>
                 <img src="logo example.png" alt="Logo">
@@ -111,7 +143,7 @@
                 <h6>We provide loans for your businesses or investments with the aim of helping you get started on your financial journey today.</h6>
             </div>
         </div>
-        <!-- Card 2 -->
+        <!-- Card 3 -->
         <div class="col-md-3 mb-3 business-frame">
             <div class="business-top">
                 <h4>Crowdfunds</h4>
@@ -121,24 +153,25 @@
                 <h6>Get your businesses to be supported by people of your communities or supporting organisations.</h6>
             </div>
         </div>
-        <!-- Card 3 -->
-        <div class="col-md-3 mb-3 business-frame">
-            <div class="business-top">
-                <h4>Business Promotion</h4>
-                <img src="logo example.png" alt="Logo">
-            </div>
-            <div class="business-detail">
-                <h6>Business Details</h6>
-            </div>
-        </div>
     </div>
     <h5 style="text-align:center;">Want to learn more?</h5>
-    <div class="desc">
+    <div class="desc micro-loan">
         <div class="desc-title">
             <h2>Micro-Loans</h2>
         </div>
-        <div class="business-detail">
-            <h6>We provide loans for your businesses or investments with the aim of helping you get started on your financial journey today.</h6>
+        <div class="business-detail desc-detail">
+            <h6>Loans can be taken by both businesses who are looking to get easier claims of loans or investors
+                 who are greatly determined at starting their financial journey, but lacks the amount of capital
+                 needed to start carving their professional path.</h6>
+            <h6>We offer a range of options to help you get started on your financial journey today,
+                 including:</h6>
+            <table class="loan-table">
+                <tr>
+                    <th>Loan Type</th>
+                    <th>Loan Amount</th>
+                    <th>Interest Rate</th>
+                </tr>
+            </table>
         </div>
     </div>
 </body>
