@@ -4,7 +4,9 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
+    scroll-behavior: smooth;
 }
-h1, h2, h3, h4, h5, h6, p, span, .content {
+
+h1, h2, h3, h4, h5, h6, p, span, th, td, .content {
     color: #f2f2f2;
 }

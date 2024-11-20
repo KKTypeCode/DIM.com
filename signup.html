@@ -23,19 +23,21 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            max-width: 500px;
+            max-width: 350px;
             margin: 50px auto;
             padding: 30px;
             background-color: #f2f2f2;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
+        .form-block h2, h5 {
+            color: #2F2F2F;
+        }
         .second-method {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            max-width: fit-content;
         }
         .connect-to-button {
             display: flex;
@@ -50,7 +52,9 @@
             border-radius: 5px;
             cursor: pointer;
             max-width: 200px;
+            max-width: 150%;
             max-height: 100px;
+            flex: 1;
         }
         .connect-to-button img {
             width: 20px;
@@ -122,14 +126,14 @@
         <form class="" id="signin" action="/DIM.com/home.html" method="GET">
             <h2>Sign Up</h2>
             <div class="second-method">
-                <button href="DIM.com/market.html" class="connect-to-button">
+                <div href="DIM.com/market.html" class="connect-to-button">
                     <img src="gmail_logo.png" alt="gmail">
                     <h6>Gmail</h6>
-                </button>
-                <button href="DIM.com/market.html" class="connect-to-button">
+                </div>
+                <div href="DIM.com/market.html" class="connect-to-button">
                     <img src="linkedin_logo.png" alt="linkedin">
                     <h6>LinkedIn</h6>
-                </button>
+                </div>
             </div>
             <h5 class="formlabel" for="usernameup" style="margin-top:20px;">Username</h5>
             <div class="inputbox1">

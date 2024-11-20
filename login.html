@@ -23,16 +23,19 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            max-width: 500px;
+            max-width: 400px;
             margin: 50px auto;
             padding: 30px;
             background-color: #f2f2f2;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
+        .form-block h2, h5 {
+            color: #2F2F2F;
+        }
         .second-method {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
             max-width: fit-content;
@@ -116,18 +119,18 @@
             </ul>
         </div>
     </nav>
-    <div class="form-block">
-        <form class="" id="signin" action="/DIM.com/home.html" method="GET">
+    <div class="form-block col-md-4 mb-4">
+        <form class="user-block" id="signin" action="/DIM.com/home.html" method="GET">
             <h2>Sign In</h2>
             <div class="second-method">
-                <button href="DIM.com/market.html" class="connect-to-button">
+                <div href="DIM.com/market.html" class="connect-to-button">
                     <img src="gmail_logo.png" alt="gmail">
                     <h6>Gmail</h6>
-                </button>
-                <button href="DIM.com/market.html" class="connect-to-button">
+                </div>
+                <div href="DIM.com/market.html" class="connect-to-button">
                     <img src="linkedin_logo.png" alt="linkedin">
                     <h6>LinkedIn</h6>
-                </button>
+                </div>
             </div>
             <h5 class="formlabel" for="userid" style="margin-top:20px;">Username/Email</h5>
             <div class="inputbox1">
@@ -140,15 +143,15 @@
             </div>
             <div id='error2' class="errormsg"></div>
             <div class="radio-select" style="margin-top:5px;">
-                <input type="radio" id="businesses" name="choice">
-                <label class="formchoice" for="businesses">Businesses</label>
-            </div>
-            <div class="radio-select">
                 <input type="radio" id="investors" name="choice">
                 <label class="formchoice" for="investors">Investors</label>
             </div>
+            <div class="radio-select">
+                <input type="radio" id="businesses" name="choice">
+                <label class="formchoice" for="businesses">Businesses</label>
+            </div>
             <div id='error3' class="errormsg"></div>
-            <button type='submit' class="btn btn-primary">Sign In</button>
+            <button type='submit' class="btn btn-primary" href="/DIM.com/market.html">Sign In</button>
             <div class="sign-up-anchor"><a href="signup.html">Or do you want to sign up?</a></div>
         </form>
     </div>

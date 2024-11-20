@@ -17,9 +17,6 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
         .navbar-brand {
             padding-left: 15px;
         }
@@ -65,6 +62,9 @@
             width: 50px;
             height: 50px;
             object-fit: cover;
+        }
+        .select-move a {
+            text-decoration: none !important;
         }
         .desc {
             display: flex;
@@ -134,13 +134,13 @@
             </div>
         </div>
         <!-- Card 2 -->
-        <div class="col-md-3 mb-3 business-frame" href="#micro-loan">
+        <div class="col-md-3 mb-3 business-frame">
             <div class="business-top">
                 <h4>Micro-Loans</h4>
                 <img src="logo example.png" alt="Logo">
             </div>
-            <div class="business-detail">
-                <h6>We provide loans for your businesses or investments with the aim of helping you get started on your financial journey today.</h6>
+            <div class="business-detail select-move">
+                <a href="#micro-loan"><h6>We provide loans for your businesses or investments with the aim of helping you get started on your financial journey today.</h6></a>
             </div>
         </div>
         <!-- Card 3 -->
@@ -155,7 +155,7 @@
         </div>
     </div>
     <h5 style="text-align:center;">Want to learn more?</h5>
-    <div class="desc micro-loan">
+    <div class="desc micro-loan" id="micro-loan">
         <div class="desc-title">
             <h2>Micro-Loans</h2>
         </div>
@@ -165,13 +165,29 @@
                  needed to start carving their professional path.</h6>
             <h6>We offer a range of options to help you get started on your financial journey today,
                  including:</h6>
-            <table class="loan-table">
+            <table class="loan-table" border="1">
                 <tr>
                     <th>Loan Type</th>
                     <th>Loan Amount</th>
                     <th>Interest Rate</th>
                 </tr>
+                <tr>
+                    <td>Starter Loans</td>
+                    <td>$500-$3,000</td>
+                    <td>7.5%-10%</td>
+                </tr>
+                <tr>
+                    <td>Business Loans</td>
+                    <td>$3,000-$30,000</td>
+                    <td>5%-7.5%</td>
+                </tr>
+                <tr>
+                    <td>Expansion Loans</td>
+                    <td>more than $30,000</td>
+                    <td>2.5%-5%</td>
+                </tr>
             </table>
+            <div class="loan-table-note"><span style="font-size:12.5px;"><b>NOTE:</b> Loan interest rates may differ from one period to another.</span></div>
         </div>
     </div>
 </body>
