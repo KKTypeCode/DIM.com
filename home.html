@@ -214,56 +214,63 @@
             font-weight: 700;
             letter-spacing: 0.8px;
         }
-        .grid-container {
+        .contain {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(4, 1fr); 
+            grid-template-areas: 
+            'tleft tleft tright'
+            'bleft centre tright'
+            'bleft bright bright';
+            width: 100%;
+            max-width: 1600px;
+            margin: auto;
             gap: 10px; 
             padding: 50px;
         }
-        .box {
+        .topleft {
+            grid-area: tleft;
             background-color: #444;
             border: 2px solid #333;
-            padding: 10px;
-            box-sizing: border-box;
+            text-align: center;
+            align-content: center;
+            color: #f2f2f2;
         }
-        .centered {
-            grid-column: 2; 
-            grid-row: 2/ span 3; 
+        .topright {
+            grid-area: tright;
+            background-color: #444;
+            border: 2px solid #333;
+            text-align: center;
+            align-content: center;
+            color: #f2f2f2;
+        }
+        .centre {
+            grid-area: centre;
             background-color: #555; 
+            border: 2px solid #333;
             text-align: center;
-            align-items: center;
-            justify-content: center;
-            display: flex;  
+            align-content: center;
+            color: #f2f2f2;
         }
-        .top-left {
-            grid-column: 1/ span 2;
-            grid-row: 1;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+        .bottomleft {
+            grid-area: bleft;
+            background-color: #444;
+            border: 2px solid #333;
             text-align: center;
-            margin-left: 12%;
+            align-content: center;
+            color: #f2f2f2;
         }
-        .top-right {
-            grid-column: 3;
-            grid-row: 1 / span 3;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-        .bottom-left {
-            grid-column: 1;
-            grid-row: 2/ span 4;
-            flex-direction: row;
-        }
-        .bottom-right {
-            grid-column: 2 / span 3;
-            grid-row: 4;
-            flex-direction: column;
-        }
-        .content {
+        .bottomright {
+            grid-area: bright;
+            background-color: #444;
+            border: 2px solid #333;
             text-align: center;
+            align-content: center;
+            color: #f2f2f2;
+        }
+        @media (max-width: 1300px) {
+            .contain {
+                width: 100%;
+                max-width: 1300px;
+            }
         }
         .highlight {
             font-weight: bold;
@@ -361,21 +368,21 @@
             <span class="title">Entrepreneur</span>
         </div>
     </div>
-    <div class="grid-container" id="usabout">
-        <div class="box top-left">
-            <div class="content">Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform</div>
+    <div class="contain" id="usabout">
+        <div class="topleft">
+            Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform
         </div>
-        <div class="box top-right">
-            <div class="content">Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform</div>
+        <div class="topright">
+            Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform
         </div>
-        <div class="box centered">
-            <div class="content">With<br><span class="highlight">YOUR</span><br>Contribution</div>
+        <div class="centre">
+            With<br><span class="highlight">YOUR</span><br>Contribution
         </div>
-        <div class="box bottom-left">
-            <div class="content">Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform</div>
+        <div class="bottomleft">
+            Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform
         </div>
-        <div class="box bottom-right">
-            <div class="content">Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform</div>
+        <div class="bottomright">
+            Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform
         </div>
     </div>
     <div class="stat-row">
