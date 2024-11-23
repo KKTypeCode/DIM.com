@@ -73,12 +73,36 @@
             'bleft centre tright'
             'bleft bright bright';
             background-color: #f2f2f2;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            width: 100%;
+            max-width: 1300px;
+            margin: auto;
         }
         .topleft {
             grid-area: tleft;
+            border: 1px solid rgba(0, 0, 0, 0.8);
         }
         .topright {
             grid-area: tright;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+        }
+        .centre {
+            grid-area: centre;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+        }
+        .bottomleft {
+            grid-area: bleft;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+        }
+        .bottomright {
+            grid-area: bright;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+        }
+        @media (max-width: 1300px) {
+            .contain {
+                width: 100%;
+                max-width: 1300px;
+            }
         }
     </style>
 </head>
@@ -101,11 +125,11 @@
         </div>
     </div>
     <div class="contain">
-        <div class="topleft"></div>
-        <div class="topright"></div>
-        <div class="centre"></div>
-        <div class="bottomleft"></div>
-        <div class="bottomright"></div>
+        <div class="topleft">Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform</div>
+        <div class="topright">Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform</div>
+        <div class="centre">Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform</div>
+        <div class="bottomleft">Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform</div>
+        <div class="bottomright">Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform</div>
     </div>
     
 </body>
