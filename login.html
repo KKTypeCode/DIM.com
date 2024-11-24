@@ -1,166 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIM</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!--Bootstrap CSS-->
-    <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-    crossorigin="anonymous">
-    <!--Bootstrap JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
-    <style>
-        .navbar-brand {
-            padding-left: 10px;
-            font-size: 25px;
-        }
-        .nav-placement {
-            margin: 0 10px;
-        }
-		.form-block {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 30px;
-            background-color: #f2f2f2;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-        .form-block h2, h5 {
-            color: #2F2F2F;
-        }
-        .second-method {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            max-width: fit-content;
-        }
-        .connect-to-button {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            text-align: center;
-            background-color: #6ed86a;
-            color: #ffffff;
-            border: none;
-            margin: 5px 0;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            max-width: 200px;
-            max-height: 100px;
-        }
-        .connect-to-button img {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-        }
-        .formlabel {
-            font-weight: 400;
-            font-size: medium;
-            margin-top: 7.5px;
-            margin-bottom: 3px;
-            text-align: left;
-        }
-        .inputbox1 {
-            font-weight: 400;
-            font-size: medium;
-            text-align: left;
-            margin-bottom: 5px;
-        }
-        .radio-select {
-            font-weight: 400;
-            font-size: medium;
-            text-align: left;
-            margin-bottom: 0;
-        }
-        .btn {
-           margin-bottom: 10px;
-        }
-        .errormsg {
-            color: red;
-            font-size: 14px;
-            margin-bottom: 5px;
-            text-align: left;
-        }
-        .sign-up-anchor a {
-            color: #000000;
-            font-weight: 550;
-            text-decoration: none;
-            margin: 30px 0 auto;
-        }
-    </style>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="home.html">DIM</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link nav-placement" href="services.html">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-placement" href="home.html#usabout">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-placement" href="support.html">Support</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-placement" href="login.html">LOGIN</a>
-                </li>
-            </ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DIM</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="script.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!--Bootstrap CSS-->
+        <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+        crossorigin="anonymous">
+        <!--Bootstrap JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+        <style>
+            .navbar-brand {
+                padding-left: 10px;
+                font-size: 25px;
+            }
+            .nav-placement {
+                margin: 0 10px;
+            }
+            .form-block {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                max-width: 400px;
+                margin: 50px auto;
+                padding: 30px;
+                background-color: #f2f2f2;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+            .form-block h2, h5 {
+                color: #2F2F2F;
+            }
+            .second-method {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                max-width: fit-content;
+            }
+            .connect-to-button {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                text-align: center;
+                background-color: #6ed86a;
+                color: #ffffff;
+                border: none;
+                margin: 5px 0;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                max-width: 200px;
+                max-height: 100px;
+            }
+            .connect-to-button img {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+            .formlabel {
+                font-weight: 400;
+                font-size: medium;
+                margin-top: 7.5px;
+                margin-bottom: 3px;
+                text-align: left;
+            }
+            .inputbox1 {
+                font-weight: 400;
+                font-size: medium;
+                text-align: left;
+                margin-bottom: 5px;
+            }
+            .radio-select {
+                font-weight: 400;
+                font-size: medium;
+                text-align: left;
+                margin-bottom: 0;
+            }
+            .btn {
+            margin-bottom: 10px;
+            }
+            .errormsg {
+                color: red;
+                font-size: 14px;
+                margin-bottom: 5px;
+                text-align: left;
+            }
+            .sign-up-anchor a {
+                color: #000000;
+                font-weight: 550;
+                text-decoration: none;
+                margin: 30px 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="home.html">DIM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-placement" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-placement" href="home.html#usabout">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-placement" href="support.html">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-placement" href="login.html">LOGIN</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>  
+        <div class="form-block col-md-4 mb-4">
+            <form class="user-block" id="signin" action="/DIM.com/home.html" method="GET">
+                <h2>Sign In</h2>
+                <div class="second-method">
+                    <div href="DIM.com/market.html" class="connect-to-button">
+                        <img src="gmail_logo.png" alt="gmail">
+                        <h6>Gmail</h6>
+                    </div>
+                    <div href="DIM.com/market.html" class="connect-to-button">
+                        <img src="linkedin_logo.png" alt="linkedin">
+                        <h6>LinkedIn</h6>
+                    </div>
+                </div>
+                <h5 class="formlabel" for="userid" style="margin-top:20px;">Username/Email</h5>
+                <div class="inputbox1">
+                    <input id="userid" type="text" placeholder="Insert username/email">
+                </div>
+                <div id='error1' class="errormsg"></div>
+                <h5 class="formlabel" for="password">Password</h5>
+                <div class="inputbox1">
+                    <input id="password" type="password" placeholder="Insert your password">
+                </div>
+                <div id='error2' class="errormsg"></div>
+                <div class="radio-select" style="margin-top:5px;">
+                    <input type="radio" id="investors" name="choice">
+                    <label class="formchoice" for="investors">Investors</label>
+                </div>
+                <div class="radio-select">
+                    <input type="radio" id="businesses" name="choice">
+                    <label class="formchoice" for="businesses">Businesses</label>
+                </div>
+                <div id='error3' class="errormsg"></div>
+                <button type='submit' class="btn btn-primary" href="/DIM.com/market.html">Sign In</button>
+                <div class="sign-up-anchor"><a href="signup.html">Or do you want to sign up?</a></div>
+            </form>
         </div>
-    </nav>  
-    <div class="form-block col-md-4 mb-4">
-        <form class="user-block" id="signin" action="/DIM.com/home.html" method="GET">
-            <h2>Sign In</h2>
-            <div class="second-method">
-                <div href="DIM.com/market.html" class="connect-to-button">
-                    <img src="gmail_logo.png" alt="gmail">
-                    <h6>Gmail</h6>
+        <footer>
+            <div class="top-footer">
+                <div class="left-footer">
+                    <div class="name-and-socials col-md-2 mb-2">
+                        <h5 class="company-name">Digital Interpersonal Market</h5>
+                        <div class="socials">
+                            <a href="https://www.facebook.com" target="_blank"><img src="facebook.svg" alt="Facebook"></a>
+                            <a href="https://www.x.com/home" target="_blank"><img src="x.png" alt="X"></a>
+                            <a href="https://www.instagram.com" target="_blank"><img src="instagram.svg" alt="Instagram" style="height: 36.5px; width: 36.5px;"></a>
+                            <a href="https://www.linkedin.com/feed" target="_blank"><img src="linkedin.svg" alt="LinkedIn"></a>
+                        </div>
+                    </div>
                 </div>
-                <div href="DIM.com/market.html" class="connect-to-button">
-                    <img src="linkedin_logo.png" alt="linkedin">
-                    <h6>LinkedIn</h6>
+                <div class="right-footer">
+                    <div class="overview board">
+                        <div class="board-name"><h5>Overview</h5></div>
+                        <div class="board-links">
+                            <a href="home.html#aboutus">About Us</a>
+                            <a href="services.html">Services</a>
+                            <a href="login.html">Login</a>
+                            <a href="market.html">Our Market</a>
+                        </div>
+                    </div>
+                    <div class="resources board">
+                        <div class="board-name"><h5>Resources</h5></div>
+                        <div class="board-links">
+                            <a href="https://www.investopedia.com/articles/00/082100.asp">Investor Tips</a>
+                            <a href="https://www.forbes.com/councils/forbesbusinesscouncil/2021/12/28/10-tips-for-becoming-a-successful-entrepreneur/">Business Tips</a>
+                            <a href="">Community Feedback</a>
+                            <a href="">Contact</a>
+                        </div>
+                    </div>
+                    <div class="policies board">
+                        <div class="board-name"><h5>Policies</h5></div>
+                        <div class="board-links">
+                            <a href="support.html">FAQ</a>
+                            <a href="privacy.html">Privacy Policy</a>
+                            <a href="terms.html">Terms & Conditions</a>
+                            <a href="license.html">License</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <h5 class="formlabel" for="userid" style="margin-top:20px;">Username/Email</h5>
-            <div class="inputbox1">
-                <input id="userid" type="text" placeholder="Insert username/email">
+            <div class="footer-line"></div>
+            <div class="bottom-footer">
+                <div class="copyright">
+                    <p>&copy; 2024 DIM. All rights reserved.</p>
+                </div>
+                <div class="start-button">
+                    <button class="btn btn-primary" type="button" title="Get Started">
+                        <a href="signup.html">Get Started</a>
+                    </button>
+                </div>
             </div>
-            <div id='error1' class="errormsg"></div>
-            <h5 class="formlabel" for="password">Password</h5>
-            <div class="inputbox1">
-                <input id="password" type="password" placeholder="Insert your password">
-            </div>
-            <div id='error2' class="errormsg"></div>
-            <div class="radio-select" style="margin-top:5px;">
-                <input type="radio" id="investors" name="choice">
-                <label class="formchoice" for="investors">Investors</label>
-            </div>
-            <div class="radio-select">
-                <input type="radio" id="businesses" name="choice">
-                <label class="formchoice" for="businesses">Businesses</label>
-            </div>
-            <div id='error3' class="errormsg"></div>
-            <button type='submit' class="btn btn-primary" href="/DIM.com/market.html">Sign In</button>
-            <div class="sign-up-anchor"><a href="signup.html">Or do you want to sign up?</a></div>
-        </form>
-    </div>
-</body>
+        </footer>
+    </body>
 </html>
