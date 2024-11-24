@@ -45,22 +45,29 @@
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
-                max-width: fit-content;
             }
             .connect-to-button {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 text-align: center;
-                background-color: #6ed86a;
-                color: #ffffff;
+                background-color: #ffffff;
+                color: #000000;
                 border: none;
-                margin: 5px 0;
+                margin: 5px;
                 padding: 10px 20px;
                 border-radius: 5px;
                 cursor: pointer;
                 max-width: 200px;
                 max-height: 100px;
+                flex: 1;
+            }
+            .connect-to-button:hover h6 {
+                color: #ffffff;
+            }
+            .connect-to-button h6 {
+                color: #000000;
+                font-size: 18px;
             }
             .connect-to-button img {
                 width: 20px;
@@ -130,11 +137,11 @@
             <form class="user-block" id="signin" action="/DIM.com/home.html" method="GET">
                 <h2>Sign In</h2>
                 <div class="second-method">
-                    <div href="DIM.com/market.html" class="connect-to-button">
+                    <div href="DIM.com/market.html" class="btn btn-secondary connect-to-button">
                         <img src="gmail_logo.png" alt="gmail">
                         <h6>Gmail</h6>
                     </div>
-                    <div href="DIM.com/market.html" class="connect-to-button">
+                    <div href="DIM.com/market.html" class="btn btn-secondary connect-to-button">
                         <img src="linkedin_logo.png" alt="linkedin">
                         <h6>LinkedIn</h6>
                     </div>
