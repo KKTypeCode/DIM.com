@@ -30,7 +30,7 @@
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                max-width: 350px;
+                max-width: 400px;
                 margin: 50px auto;
                 padding: 30px;
                 background-color: #f2f2f2;
@@ -43,25 +43,30 @@
             .second-method {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
+                margin-left: 0;
             }
             .connect-to-button {
                 display: flex;
-                flex-direction: row;
                 align-items: center;
                 text-align: center;
-                background-color: #6ed86a;
-                color: #ffffff;
-                border: none;
-                margin: 5px 0;
-                padding: 10px 20px;
+                background-color: #ffffff;
+                color: #000000;
+                border: 1;
+                margin: 5px;
+                padding: 9px 20px;
                 border-radius: 5px;
                 cursor: pointer;
-                max-width: 200px;
-                max-width: 150%;
+                width: 200px;
                 max-height: 100px;
                 flex: 1;
+            }
+            .connect-to-button h6 {
+                color: #000000;
+                font-size: 19px;
+                margin-top: auto;
+                margin-bottom: auto;
             }
             .connect-to-button img {
                 width: 20px;
@@ -89,6 +94,13 @@
             }
             .btn {
             margin-bottom: 10px;
+            }
+            .submit {
+                margin-top: 10px;
+            }
+            /* Remove margin-top after submit (DOESNT WORK) */
+            .submit:after {
+                margin-top: 0;
             }
             .errormsg {
                 color: red;

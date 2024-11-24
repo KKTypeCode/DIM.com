@@ -45,29 +45,31 @@
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
+                margin-left: 0;
             }
             .connect-to-button {
                 display: flex;
-                flex-direction: row;
                 align-items: center;
                 text-align: center;
                 background-color: #ffffff;
                 color: #000000;
-                border: none;
-                margin: 5px;
-                padding: 10px 20px;
+                border: 1;
+                margin: 0 5px;
+                padding: 9px 20px;
                 border-radius: 5px;
                 cursor: pointer;
-                max-width: 200px;
+                width: 200px;
                 max-height: 100px;
                 flex: 1;
             }
-            .connect-to-button:hover h6 {
-                color: #ffffff;
-            }
             .connect-to-button h6 {
                 color: #000000;
-                font-size: 18px;
+                font-size: 19px;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+            .connect-to-button:hover h6 {
+                color: #ffffff;
             }
             .connect-to-button img {
                 width: 20px;
@@ -94,7 +96,14 @@
                 margin-bottom: 0;
             }
             .btn {
-            margin-bottom: 10px;
+                margin-bottom: 10px;
+            }
+            .submit {
+                margin-top: 10px;
+            }
+            /* Remove margin-top after submit (DOESNT WORK) */
+            .submit:after {
+                margin-top: 0;
             }
             .errormsg {
                 color: red;
@@ -165,7 +174,7 @@
                     <label class="formchoice" for="businesses">Businesses</label>
                 </div>
                 <div id='error3' class="errormsg"></div>
-                <button type='submit' class="btn btn-primary" href="/DIM.com/market.html">Sign In</button>
+                <button type='submit' class="btn btn-primary submit" href="/DIM.com/market.html">Sign In</button>
                 <div class="sign-up-anchor"><a href="signup.html">Or do you want to sign up?</a></div>
             </form>
         </div>
