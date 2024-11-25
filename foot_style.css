@@ -151,3 +151,49 @@ footer {
     text-align: right;
     font-weight: 550;
 }
+
+@media (max-width: 1600px) {
+    .shite {
+        flex-direction: column;
+    }
+}
+
+.shite {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    height: 400px;
+    width: 100%;
+    align-items: center;
+}
+.socials img {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+.block1 {
+    flex: 50%;
+    max-width: 300px;
+    width: 100%;
+    padding-left: 2%;
+}
+.block2 {
+    flex: 50%;
+    max-width: 300px;
+    width: 100%;
+    padding-left: 2%;
+}
+.block3 {
+    flex: 50%;
+    max-width: 300px;
+    width: 100%;
+    padding-left: 2%;
+}
+.block4 {
+    flex: 50%;
+    max-width: 300px;
+    width: 100%;
+    padding-left: 2%;
+}
