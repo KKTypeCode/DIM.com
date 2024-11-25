@@ -12,11 +12,11 @@ register.addEventListener('submit', (e) => {
     let msg5 = []
     let msg6 = []
 
-    if (usernameup.value.trim() === null || usernameup.value.trim() === '') {
+    if ((usernameup.value.trim() === null) || (usernameup.value.trim() === '')) {
         msg4.push('Username is required')
     }
 
-    if (mailup.vlaue.trim() === null || mailup.value.trim() === '') {
+    if ((mailup.vlaue.trim() === null) || (mailup.value.trim() === '')) {
         msg5.push('Email is required')
         passup.value = ''
     } else if (remail.test(mailup.value) === false) {
@@ -24,7 +24,7 @@ register.addEventListener('submit', (e) => {
         passup.value = ''
     }
 
-    if (passup.value.trim() === null || passup.value.trim() === '') {
+    if ((passup.value.trim() === null) || (passup.value.trim() === '')) {
         msg6.push('Password is required')
     } else if (passup.value.length < 8) {
         msg6.push('Password is not long enough')
@@ -33,8 +33,9 @@ register.addEventListener('submit', (e) => {
     }
 
     if ((msg4.length + msg5.length + msg6.length) === 0) {
+        console.log('Fail')
         console.log('Form submitted')
-        register.onsubmit()
+        e.preventDefault()
     } else {
         error4.innerHTML = msg4.join()
         error5.innerHTML = msg5.join()
