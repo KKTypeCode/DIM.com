@@ -64,6 +64,7 @@
                 border: 5px solid #787878;
                 border-radius: 1vw;
                 padding: 20px;
+                margin-bottom: 0;
             }
             .profile-infocard p {
                 margin: 0;
@@ -99,6 +100,34 @@
                 background-color: #538D4E;
                 border-radius: 1vw;
                 margin: 5px;
+            }
+            .stat-card h4 {
+                font-weight: 575;
+            }
+            .investment-infotitle {
+                text-align: center;
+                font-size: 3.5vw;
+            }
+            .line {
+                width: 80%;
+                height: 2px;
+                background-color: white;
+                margin: auto;
+                margin-bottom: 1vw;
+            }
+            .investment-list {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 80%;
+                margin: auto;
+            }
+            .investment-card {
+                background-color: #347deb;
+                margin: 20px;
+                padding: 20px;
+                border-radius: 1vw;
             }
         </style>
     </head>
@@ -164,7 +193,25 @@
                 </div>
             </div>
         </div>
-        <div></div>
+        <h3 class="investment-infotitle">Invested Business List</h3>
+        <div class="line"></div>
+        <div class="investment-list">
+            <div class="investment-card">
+                <h5>Business 1</h5>
+                <p>Amount for Offer: $500,000 for 50% of equity</p>
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis urna eget lectus sagittis, ac bibendum lectus malesuada. Donec in ipsum id nisi luctus faucibus.</p>
+            </div>
+            <div class="investment-card">
+                <h5>Business 2</h5>
+                <p>Amount for Offer: $250,000 for 35% of equity</p>
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis urna eget lectus sagittis, ac bibendum lectus malesuada. Donec in ipsum id nisi luctus faucibus.</p>
+            </div>
+            <div class="investment-card">
+                <h5>Business 3</h5>
+                <p>Amount for Offer: $750,000 for 45% of equity + 10% royalty</p>
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis urna eget lectus sagittis, ac bibendum lectus malesuada. Donec in ipsum id nisi luctus faucibus.</p>
+            </div>
+        </div>
         <footer>
             <div class="top-footer">
                 <div class="left-footer">
