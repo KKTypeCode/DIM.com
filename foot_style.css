@@ -135,7 +135,6 @@ footer {
     padding-bottom: 15px;
     width: 100%;
     text-align: center;
-    background-color: #424242;
     color: #f2f2f2;
     text-align: center;
 }
@@ -153,18 +152,18 @@ footer {
 }
 
 @media (max-width: 1600px) {
-    .shite {
+    .newfoot {
         flex-direction: column;
     }
 }
 
-.shite {
+.newfoot {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
     margin: auto;
-    height: 400px;
+    height: 300px;
     width: 100%;
     align-items: center;
 }
@@ -196,4 +195,36 @@ footer {
     max-width: 300px;
     width: 100%;
     padding-left: 2%;
+}
+.footer-line {
+    width: 90%;
+    height: 2px;
+    background-color: #f2f2f2;
+    margin: 16px auto;
+    margin-bottom: 32px;
+}
+.bottom-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px; 
+    padding-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    color: #f2f2f2;
+    text-align: center;
+    background-color: #424242;
+}
+
+.bottom-footer .copyright {
+    margin-left: 2.5vw;
+    text-align: left;
+    font-weight: 550;
+}
+
+.bottom-footer .start-button {
+    margin-right: 2.5vw;
+    text-align: right;
+    font-weight: 550;
 }
