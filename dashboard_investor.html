@@ -16,12 +16,54 @@
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
         <style>
-            .navbar-brand {
-                padding-left: 10px;
-                font-size: 25px;
+            .main-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 20px;
+                flex: 1;
             }
-            .nav-placement {
-                margin: 0 10px;
+            .left-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 30%;
+                background-color: #f8f9fa;
+                border-radius: 10px;
+                padding: 20px;
+            }
+            .main-profile {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                background-color: #ff7043;
+                border: 5px solid #ffcc80;
+            }
+            .main-profile img {
+                border-radius: 50%;
+            }
+            .profile-details {
+                margin-top: auto;
+                margin-bottom: auto;
+                text-align: left;
+            }
+            .right-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 45%;
+            }
+            .profile-stat {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 30%;
             }
         </style>
     </head>
@@ -51,7 +93,7 @@
         <div class="main-container">
             <div class="left-container">
                 <div class="main-profile">
-                    <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
+                    <img src="profile.jpg" alt="Profile Picture">
                     <div class="profile-details">
                         <h5>John Doe</h5>
                         <p>Software Engineer</p>
