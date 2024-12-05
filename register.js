@@ -16,7 +16,7 @@ register.addEventListener('submit', (e) => {
         msg4.push('Username is required')
     }
 
-    if ((mailup.vlaue.trim() === null) || (mailup.value.trim() === '')) {
+    if ((mailup.value.trim() === null) || (mailup.value.trim() === '')) {
         msg5.push('Email is required')
         passup.value = ''
     } else if (remail.test(mailup.value) === false) {
@@ -32,11 +32,7 @@ register.addEventListener('submit', (e) => {
         msg6.push('Invalid password')
     }
 
-    if ((msg4.length + msg5.length + msg6.length) === 0) {
-        console.log('Fail')
-        console.log('Form submitted')
-        e.preventDefault()
-    } else {
+    if ((msg4.length + msg5.length + msg6.length) != 0) {
         error4.innerHTML = msg4.join()
         error5.innerHTML = msg5.join()
         error6.innerHTML = msg6.join()
