@@ -74,19 +74,17 @@
                 justify-content: center;
                 align-items: center;
                 width: 45%;
-                height: 100%;
             }
             .profile-stat {
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                width: 100%;
                 padding: 20px;
                 background-color: #424242;
                 border: 5px solid #787878;
                 border-radius: 1.5vw;
+                flex: 1;
             }
             .stat-card {
                 display: flex;
@@ -94,12 +92,11 @@
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                width: 50%;
+                width: 100%;
                 padding: 10px;
-                background-color: #538D4E;
+                background-color: #d3a83d;
                 border-radius: 1vw;
                 margin: 5px;
-                flex: 1;
             }
             .stat-card h4 {
                 font-weight: 575;
@@ -159,57 +156,42 @@
                 <div class="main-profile">
                     <img src="profile-icon.jpg" alt="Profile Picture">
                     <div class="profile-details">
-                        <h4>John Doe</h4>
-                        <p>Software Engineer</p>
+                        <h4>John Logistics</h4>
+                        <p>Transport & Logistics</p>
                     </div>
                 </div>
                 <div class="profile-infocard">
-                    <h3>Personal Information</h3>
-                    <p>Name: John Doe</p>
+                    <h3>Business Information</h3>
+                    <p>Name: John Logistics</p>
                     <p>Email: johndoe@example.com</p>
                     <p>Phone: 123-456-7890</p>
                     <p>Address: 123 Main St, City, State, Zip</p>
-                    <p>Experience: 3.5 years in Stocks</p>
+                    <p>Experience: 15 yrs in the industry</p>
                 </div>
             </div>
             <div class="right-container col-md-2 mb-2">
-                <div class="profile-stat">
-                    <div class="stat-card">
-                        <h6>Total Investment Value</h6>
-                        <h4>$127,000,000.00</h4>
-                    </div>
-                    <div class="stat-card">
-                        <h6>Total ROI</h6>
-                        <h4>$32,000,000.00</h4>
-                    </div>
-                    <div class="stat-card">
-                        <h6>Yearly Return Rate</h6>
-                        <h4>7.5%</h4>
-                    </div>
-                    <div class="stat-card">
-                        <h6>Number of Business Invested</h6>
-                        <h4>30</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <h3 class="investment-infotitle">Invested Business List</h3>
-        <div class="line"></div>
-        <div class="investment-list">
-            <div class="investment-card">
-                <h5>Business 1</h5>
-                <p>Amount for Offer: $500,000 for 50% of equity</p>
-                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis urna eget lectus sagittis, ac bibendum lectus malesuada. Donec in ipsum id nisi luctus faucibus.</p>
-            </div>
-            <div class="investment-card">
-                <h5>Business 2</h5>
-                <p>Amount for Offer: $250,000 for 35% of equity</p>
-                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis urna eget lectus sagittis, ac bibendum lectus malesuada. Donec in ipsum id nisi luctus faucibus.</p>
-            </div>
-            <div class="investment-card">
-                <h5>Business 3</h5>
-                <p>Amount for Offer: $750,000 for 45% of equity + 10% royalty</p>
-                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis urna eget lectus sagittis, ac bibendum lectus malesuada. Donec in ipsum id nisi luctus faucibus.</p>
+                <table class="profile-stat">
+                    <tr>
+                        <td class="stat-card">
+                            <h6>Number of people view</h6>
+                            <h4>10.5k</h4>
+                        </td>
+                        <td class="stat-card">
+                            <h6>Number of people interested</h6>
+                            <h4>1.8k</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="stat-card">
+                            <h6>Funds raised</h6>
+                            <h4>$125,000</h4>
+                        </td>
+                        <td class="stat-card">
+                            <h6>Total ROI</h6>
+                            <h4>$32,000,000.00</h4>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
         <footer>
@@ -264,6 +246,11 @@
             <div class="bottom-footer">
                 <div class="copyright">
                     <p>&copy; 2024 DIM. All rights reserved.</p>
+                </div>
+                <div class="start-button">
+                    <button class="btn btn-primary" type="button" title="Get Started">
+                        <a href="signup.html">Get Started</a>
+                    </button>
                 </div>
             </div>
         </footer>
