@@ -30,9 +30,10 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                width: 36%;
+                width: 42.5%;
+                min-width: 407px;
                 height: 100%;
-                padding: 10px;
+                margin-right: 10px;
             }
             .main-profile {
                 display: flex;
@@ -52,6 +53,7 @@
                 height: 150px;
                 width: 150px;
                 border-radius: 50%;
+                margin-right: 5px;
             }
             .profile-details {
                 margin-top: auto;
@@ -73,7 +75,9 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 45%;
+                width: 42.5%;
+                min-width: 407px;
+                height: 100%;
             }
             .profile-stat {
                 display: flex;
@@ -84,7 +88,17 @@
                 background-color: #424242;
                 border: 5px solid #787878;
                 border-radius: 1.5vw;
+                min-height: 421.6px;
+                margin-top: 25px;
+                margin-bottom: 15px;
                 flex: 1;
+            }
+            .sub-profile-stat {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                text-align: left;
             }
             .stat-card {
                 display: flex;
@@ -125,6 +139,35 @@
                 margin: 20px;
                 padding: 20px;
                 border-radius: 1vw;
+            }
+            @media (max-width: 1175px) {
+                .top-profile {
+                    flex-direction: column;
+                }
+                .left-container {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+                .main-profile {
+                    margin-bottom: 7.5px;
+                }
+                .profile-stat {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    min-height: 100%;
+                }
+            }
+            @media (max-width: 407px) {
+                .top-profile {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                .right-container {
+                    min-width: 344px;
+                }
+                .left-container {
+                    min-width: 344px;
+                }
             }
         </style>
     </head>
@@ -171,17 +214,17 @@
             </div>
             <div class="right-container col-md-2 mb-2">
                 <table class="profile-stat">
-                    <tr>
-                        <td class="stat-card">
+                    <tr class="sub-profile-stat">
+                        <td class="stat-card" style="min-height: 104px;">
                             <h6>Number of people view</h6>
                             <h4>10.5k</h4>
                         </td>
-                        <td class="stat-card">
+                        <td class="stat-card" style="min-height: 104px;">
                             <h6>Number of people interested</h6>
                             <h4>1.8k</h4>
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="sub-profile-stat">
                         <td class="stat-card">
                             <h6>Funds raised</h6>
                             <h4>$125,000</h4>

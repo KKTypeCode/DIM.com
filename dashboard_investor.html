@@ -30,9 +30,10 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                width: 36%;
+                width: 42.5%;
+                min-width: 407px;
                 height: 100%;
-                padding: 10px;
+                margin-right: 10px;
             }
             .main-profile {
                 display: flex;
@@ -52,6 +53,7 @@
                 height: 150px;
                 width: 150px;
                 border-radius: 50%;
+                margin-right: 5px;
             }
             .profile-details {
                 margin-top: auto;
@@ -73,7 +75,8 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 45%;
+                width: 42.5%;
+                min-width: 407px;
                 height: 100%;
             }
             .profile-stat {
@@ -87,6 +90,10 @@
                 background-color: #424242;
                 border: 5px solid #787878;
                 border-radius: 1.5vw;
+                min-height: 421.6px;
+                margin-top: 25px;
+                margin-bottom: 15px;
+                flex: 1;
             }
             .stat-card {
                 display: flex;
@@ -94,7 +101,7 @@
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                width: 50%;
+                width: 100%;
                 padding: 10px;
                 background-color: #538D4E;
                 border-radius: 1vw;
@@ -129,10 +136,39 @@
                 padding: 20px;
                 border-radius: 1vw;
             }
+            @media (max-width: 1175px) {
+                .top-profile {
+                    flex-direction: column;
+                }
+                .left-container {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+                .main-profile {
+                    margin-bottom: 7.5px;
+                }
+                .profile-stat {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    min-height: 100%;
+                }
+            }
+            @media (max-width: 407px) {
+                .top-profile {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                .right-container {
+                    min-width: 344px;
+                }
+                .left-container {
+                    min-width: 344px;
+                }
+            }
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="home.html">DIM</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

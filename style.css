@@ -26,10 +26,17 @@ header {
 
 .navbar-brand {
     padding-left: 10px;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: 600;
 }
+
 .nav-placement {
     margin: 0 10px;
+    align-items: right;
+}
+
+.navbar-toggler {
+    margin-right: 10px;
 }
 
 footer {
@@ -56,39 +63,45 @@ footer {
     justify-content: space-around;
     flex-wrap: wrap;
     margin: auto;
-    height: 300px;
+    height: 270px;
     width: 100%;
     align-items: center;
 }
+
 .socials img {
     width: 40px;
     height: 40px;
     margin: 10px;
 }
+
 .block1 {
     flex: 50%;
     max-width: 300px;
     width: 100%;
     padding-left: 2%;
 }
+
 .block2 {
     flex: 50%;
     max-width: 300px;
     width: 100%;
     padding-left: 2%;
 }
+
 .block3 {
     flex: 50%;
     max-width: 300px;
     width: 100%;
     padding-left: 2%;
 }
+
 .block4 {
     flex: 50%;
     max-width: 300px;
     width: 100%;
     padding-left: 2%;
 }
+
 .footer-line {
     width: 90%;
     height: 2px;
@@ -96,6 +109,7 @@ footer {
     margin: 16px auto;
     margin-bottom: 32px;
 }
+
 .bottom-footer {
     display: flex;
     flex-direction: row;
@@ -120,4 +134,13 @@ footer {
     margin-right: 2.5vw;
     text-align: right;
     font-weight: 550;
+}
+
+@media (max-width: 540px) {
+    .newfoot {
+        margin-bottom: 50px;
+    }
+    .bottom-footer {
+        padding: 0 15px;
+    }
 }
