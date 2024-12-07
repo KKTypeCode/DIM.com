@@ -27,7 +27,7 @@
                 padding-right: auto;
             }
             .title h1 {
-                font-size: 120px;
+                font-size: 11.5vw;
                 margin: 30px;
                 user-select: none !important;
             }
@@ -51,11 +51,13 @@
                 justify-content: center;
                 align-items: center;
                 gap: 20px;
+                row-gap: 10px;
+                margin-bottom: 20px;
             }
             .business-frame {
                 border: 1px solid #ddd;
                 padding: 20px;
-                margin-bottom: 20px;
+                border-radius: 7.5px;
                 text-align: center;
             }
             .business-top {
@@ -68,52 +70,30 @@
                 width: 50px;
                 height: 50px;
                 object-fit: cover;
+                margin-left: 5px;
             }
-            /* Popup container */
+            .business-detail a:hover {
+                cursor: pointer;
+            }
             .popup {
-                display: none; /* Hidden by default */
+                display: none;
                 position: fixed;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 padding: 20px;
-                background-color: white;
+                background-color: #2f2f2f;
+                border-radius: 12px;
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
                 z-index: 1000;
-                width: 300px;
-                text-align: center;
+                width: 75%;
+                text-align: left;  
             }
-            .popup1 {
-                display: none; /* Hidden by default */
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                padding: 20px;
-                background-color: white;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-                z-index: 1000;
-                width: 300px;
-                text-align: center;
+            .popup h2, p {
+                color: #fff;
             }
-            .popup2 {
-                display: none; /* Hidden by default */
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                padding: 20px;
-                background-color: white;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-                z-index: 1000;
-                width: 300px;
-                text-align: center;
-            }
-            
-            
-            /* Overlay */
             .overlay {
-                display: none; /* Hidden by default */
+                display: none;
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -122,13 +102,65 @@
                 background: rgba(0, 0, 0, 0.5);
                 z-index: 999;
             }
-            
-            /* Close button */
+            .popup-button {
+                margin-top: 15px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-top: auto;
+                padding-bottom: auto;
+            }
             .close-btn {
                 margin-top: 15px;
                 cursor: pointer;
-                color: blue;
+                color: red;
             }
+            .pagination-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 20px;
+            }  
+            .page-btn {
+                border: 1px solid #ccc;
+                background-color: white;
+                color: black;
+                width: 36px;
+                height: 36px;
+                border-radius: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                font-size: 14px;
+            }
+            .page-btn:hover {
+                opacity: 0.8;
+            }
+            .page-btn h6 {
+                color: #2f2f2f;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+            .active h6 {
+               color: white;
+            }         
+            .page-btn.active {
+                background-color: black;
+                color: white;
+                font-weight: bold;
+            }        
+            .page-btn:disabled {
+                cursor: not-allowed;
+                opacity: 0.5;
+            }
+            .dots {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                color: #666;
+            }         
         </style>
     </head>
     <body>
@@ -167,25 +199,34 @@
             <!-- Card 1 -->
             <div class="col-md-3 mb-3 business-frame">
                 <div class="business-top">
-                    <h4>Business Name 1</h4>
+                    <h4>GreenSprout Farming Collective</h4>
                     <img src="logo example.png" alt="Logo">
                 </div>
-
-                <!-- Business Details popup button -->
                 <div class="business-detail">
-                    <a onclick="showPopup()"><h6>Business Details</h6></a>
+                    <a onclick="showPopup('popup1', 'overlay1')"><h6>Business Details</h6></a>
                 </div>
-
-                <!-- Popup display -->
-                <div class="overlay" id="overlay" onclick="closePopup()"></div>
-                <div class="popup" id="popup">
-                    <h2>Business 1</h2>
-                    <p>Product</p>
-                    <p>Location: St. Orchard Street, Singapore</p>
-                    <p>Date of Creation: 27 June, 2018</p>
-                    <span class="close-btn" onclick="closePopup()">Close</span>
+                <div class="overlay" id="overlay1" onclick="closePopup('popup1', 'overlay1')"></div>
+                <div class="popup" id="popup1">
+                    <h2 style="font-weight:bold;">GreenSprout Farming Collective</h2>
+                    <p><b>Type of Product:</b> Service</p>
+                    <p><b>Location:</b> Bawanpur Village, Uttar Pradesh, India</p>
+                    <p><b>Date of Creation:</b> April 12, 2018</p>
+                    <p style="font-weight:bold;">Product/Service Description:</p>
+                    <p>GreenSprout helps small-scale farmers transition to organic farming through training and cooperative marketing. 
+                    They offer natural fertilizers and connect farmers directly with buyers in nearby towns.</p>
+                    <p style="font-weight:bold;">Statistics and Credibility:</p>
+                    <ul>
+                        <li>Trained 250 farmers in organic practices.</li>
+                        <li>Increased farmer incomes by an average of 40%.</li>
+                        <li>Supported by the Village Cooperative Bank and local agricultural department.</li>
+                    </ul>
+                    <div class="popup-button">
+                        <span class="close-btn" onclick="closePopup('popup2', 'overlay2')">Close</span> <!--WHY DOES IT NOT WORK HELP PLS-->
+                        <button class="btn btn-primary" href="#">Start Investing</button>
+                    </div>
                 </div>
             </div>
+
             <!-- Card 2 -->
             <div class="col-md-3 mb-3 business-frame">
                 <div class="business-top">
@@ -201,7 +242,10 @@
                     <p>Product</p>
                     <p>Location: Marina Bay, Singapore</p>
                     <p>Date of Creation: 15 April, 2019</p>
-                    <span class="close-btn" onclick="closePopup('popup2', 'overlay2')">Close</span>
+                    <div class="popup-button">
+                        <span class="close-btn" onclick="closePopup('popup2', 'overlay2')">Close</span>
+                        <button class="btn btn-primary" href="#">Start Investing</button>
+                    </div>
                 </div>
             </div>
 
@@ -261,6 +305,17 @@
                     <span class="close-btn" onclick="closePopup('popup5', 'overlay5')">Close</span>
                 </div>
             </div>
+        </div>
+        <div class="pagination-container">
+            <button class="page-btn" disabled>&larr;</button>
+            <button class="page-btn active"><h6>1</h6></button>
+            <button class="page-btn"><h6>2</h6></button>
+            <button class="page-btn"><h6>3</h6></button>
+            <button class="page-btn"><h6>4</h6></button>
+            <button class="page-btn"><h6>5</h6></button>
+            <span class="dots"><h6>...</h6></span>
+            <button class="page-btn"><h6>60</h6></button>
+            <button class="page-btn">&rarr;</button>
         </div>
         <footer>
             <div class="newfoot">
@@ -328,11 +383,15 @@
         function showPopup(popupId, overlayId) {
             document.getElementById(popupId).style.display = "block";
             document.getElementById(overlayId).style.display = "block";
+            document.body.style.height = "100%";
+            document.body.style.overflowY = "hidden";
         }
 
         function closePopup(popupId, overlayId) {
             document.getElementById(popupId).style.display = "none";
             document.getElementById(overlayId).style.display = "none";
+            document.body.style.height = "auto";
+            document.body.style.overflowY = "scroll";
         }
     </script>
 </html>
