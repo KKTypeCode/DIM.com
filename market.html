@@ -83,6 +83,33 @@
                 width: 300px;
                 text-align: center;
             }
+            .popup1 {
+                display: none; /* Hidden by default */
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 20px;
+                background-color: white;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+                width: 300px;
+                text-align: center;
+            }
+            .popup2 {
+                display: none; /* Hidden by default */
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 20px;
+                background-color: white;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+                width: 300px;
+                text-align: center;
+            }
+            
             
             /* Overlay */
             .overlay {
@@ -166,9 +193,18 @@
                     <img src="logo example.png" alt="Logo">
                 </div>
                 <div class="business-detail">
-                    <h6>Business Details</h6>
+                    <a onclick="showPopup('popup2', 'overlay2')"><h6>Business Details</h6></a>
+                </div>
+                <div class="overlay" id="overlay2" onclick="closePopup('popup2', 'overlay2')"></div>
+                <div class="popup" id="popup2">
+                    <h2>Business 2</h2>
+                    <p>Product</p>
+                    <p>Location: Marina Bay, Singapore</p>
+                    <p>Date of Creation: 15 April, 2019</p>
+                    <span class="close-btn" onclick="closePopup('popup2', 'overlay2')">Close</span>
                 </div>
             </div>
+
             <!-- Card 3 -->
             <div class="col-md-3 mb-3 business-frame">
                 <div class="business-top">
@@ -176,9 +212,18 @@
                     <img src="logo example.png" alt="Logo">
                 </div>
                 <div class="business-detail">
-                    <h6>Business Details</h6>
+                    <a onclick="showPopup('popup3', 'overlay3')"><h6>Business Details</h6></a>
+                </div>
+                <div class="overlay" id="overlay3" onclick="closePopup('popup3', 'overlay3')"></div>
+                <div class="popup" id="popup3">
+                    <h2>Business 3</h2>
+                    <p>Product</p>
+                    <p>Location: Downtown Core, Singapore</p>
+                    <p>Date of Creation: 10 March, 2020</p>
+                    <span class="close-btn" onclick="closePopup('popup3', 'overlay3')">Close</span>
                 </div>
             </div>
+
             <!-- Card 4 -->
             <div class="col-md-3 mb-3 business-frame">
                 <div class="business-top">
@@ -186,9 +231,18 @@
                     <img src="logo example.png" alt="Logo">
                 </div>
                 <div class="business-detail">
-                    <h6>Business Details</h6>
+                    <a onclick="showPopup('popup4', 'overlay4')"><h6>Business Details</h6></a>
+                </div>
+                <div class="overlay" id="overlay4" onclick="closePopup('popup4', 'overlay4')"></div>
+                <div class="popup" id="popup4">
+                    <h2>Business 4</h2>
+                    <p>Product</p>
+                    <p>Location: Sentosa, Singapore</p>
+                    <p>Date of Creation: 5 December, 2021</p>
+                    <span class="close-btn" onclick="closePopup('popup4', 'overlay4')">Close</span>
                 </div>
             </div>
+
             <!-- Card 5 -->
             <div class="col-md-3 mb-3 business-frame">
                 <div class="business-top">
@@ -196,7 +250,15 @@
                     <img src="logo example.png" alt="Logo">
                 </div>
                 <div class="business-detail">
-                    <h6>Business Details</h6>
+                    <a onclick="showPopup('popup5', 'overlay5')"><h6>Business Details</h6></a>
+                </div>
+                <div class="overlay" id="overlay5" onclick="closePopup('popup5', 'overlay5')"></div>
+                <div class="popup" id="popup5">
+                    <h2>Business 5</h2>
+                    <p>Product</p>
+                    <p>Location: Bugis, Singapore</p>
+                    <p>Date of Creation: 12 July, 2022</p>
+                    <span class="close-btn" onclick="closePopup('popup5', 'overlay5')">Close</span>
                 </div>
             </div>
         </div>
@@ -263,14 +325,14 @@
     </body>
     <!-- JavaScript to Show and Hide Popup -->
     <script>
-        function showPopup() {
-            document.getElementById("popup").style.display = "block";
-            document.getElementById("overlay").style.display = "block";
+        function showPopup(popupId, overlayId) {
+            document.getElementById(popupId).style.display = "block";
+            document.getElementById(overlayId).style.display = "block";
         }
 
-        function closePopup() {
-            document.getElementById("popup").style.display = "none";
-            document.getElementById("overlay").style.display = "none";
+        function closePopup(popupId, overlayId) {
+            document.getElementById(popupId).style.display = "none";
+            document.getElementById(overlayId).style.display = "none";
         }
     </script>
 </html>
