@@ -82,6 +82,10 @@
             <h1>Agreement Page</h1>
         </div> 
     </div>
+    <div class="agreement-container">
+        <h1>Agreement Details</h1>
+        <p id="agreement-content">Loading agreement...</p>
+    </div>
     <div class="content">
         <div class="agreement-section">
             <h2>Our Business Goals</h2>
@@ -178,13 +182,25 @@
         </div>
     </footer>
     <script>
-        function handleAgreement(accepted) {
-            if (accepted) {
-                alert('Thank you for agreeing to the terms. Your investment journey begins now!');
+        const urlParams = new URLSearchParams(window.location.search);
+        const business = urlParams.get('business');
+
+        // Define the agreement content for each business
+        const agreements = {
+            business1: "This is the agreement content for Business 1. Please review the terms and conditions before investing.",
+            business2: "This is the agreement content for Business 2. Make sure you understand all the details before proceeding.",
+            business3: "This is the agreement content for Business 3. Carefully read the agreement before making any decisions."
+        };
+
+        // Display the appropriate agreement content
+        document.addEventListener('DOMContentLoaded', () => {
+            const agreementSection = document.getElementById('agreement-content');
+            if (business && agreements[business]) {
+                agreementSection.innerText = agreements[business];
             } else {
-                alert('You have declined the terms. Feel free to reach out if you have any questions.');
+                agreementSection.innerText = "No agreement found for the selected business.";
             }
-        }
+        });
     </script>
 </body>
 </html>
