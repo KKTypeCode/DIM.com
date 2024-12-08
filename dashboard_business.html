@@ -118,27 +118,41 @@
             .investment-infotitle {
                 text-align: center;
                 font-size: 3.5vw;
+                font-weight: 500;
+                color: #f2f2f2;
+                margin-bottom: 1vw;
             }
             .line {
                 width: 80%;
                 height: 2px;
                 background-color: white;
                 margin: auto;
-                margin-bottom: 1vw;
             }
-            .investment-list {
+            .invest-stat {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                width: 80%;
-                margin: auto;
-            }
-            .investment-card {
-                background-color: #347deb;
-                margin: 20px;
-                padding: 20px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+                font-size: 1.2vw;
+                background-color: #787878;
                 border-radius: 1vw;
+                width: 75%;
+            }
+            .investor-card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: left;
+                text-align: left;
+                padding: 10px;
+                width: 60%;
+                margin-bottom: 10px;
+            }
+            .investor-names {
+                text-align: left;
             }
             @media (max-width: 1175px) {
                 .top-profile {
@@ -174,7 +188,7 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="home.html">DIM</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" id="nav-button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -188,8 +202,8 @@
                     <li class="nav-item">
                         <a class="nav-link nav-placement" href="support.html">Support</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-placement" href="login.html">LOGIN</a>
+                    <li class="nav-item navbar-profile-pic" id="account-check">
+                        <a class="nav-link nav-placement" href="dashboard_business.html"><img src="profile-icon.jpg"></a>
                     </li>
                 </ul>
             </div>
@@ -235,6 +249,40 @@
                         </td>
                     </tr>
                 </table>
+            </div>
+        </div>
+        <div class="invest-stat">
+            <div class="interested investor-card">
+                <div class="investment-infotitle">
+                    Interested Investors
+                </div>
+                <ul class="list-group investor-names">
+                    <li>Victor Blackwood</li>
+                    <li>Amelia Drayton</li>
+                    <li>Oliver Ashbourne</li>
+                </ul>
+            </div>
+            <div class="line"></div>
+            <div class="awaiting investor-card">
+                <div class="investment-infotitle">
+                    Negotiating Agreements
+                </div>
+                <ul class="list-group investor-names">
+                    <li>Sophia Langford</li>
+                    <li>Dominic Hargrave</li>
+                    <li>Isabella Whitmore</li>
+                </ul>
+            </div>
+            <div class="line"></div>
+            <div class="accepting investor-card">
+                <div class="investment-infotitle">
+                    Investments Accepted
+                </div>
+                <ul class="list-group investor-names">
+                    <li>Elliot Braxton</li>
+                    <li>Cecilia Westwood</li>
+                    <li>Harrison Thorne</li>
+                </ul>
             </div>
         </div>
         <footer>

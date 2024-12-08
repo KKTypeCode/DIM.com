@@ -45,6 +45,17 @@ header {
     margin-right: 10px;
 }
 
+.nav-item {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navbar-profile-pic img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
 footer {
     display: flex;
     flex-direction: column;

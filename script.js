@@ -1,20 +1,21 @@
 const login = document.getElementById('signin')
-const register = document.getElementById('signup')
 const inpuserid = document.getElementById('userid')
+const inppass = document.getElementById('password')
 const investor = document.getElementById('investors')
 const business = document.getElementById('businesses')
-const inppass = document.getElementById('password')
-const usernameup = document.getElementById('usernameup')
-const mailup = document.getElementById('useridup')
-const passup = document.getElementById('passwordup')
 const error1 = document.getElementById('error1')
 const error2 = document.getElementById('error2')
 const error3 = document.getElementById('error3')
-const error4 = document.getElementById('error4')
-const error5 = document.getElementById('error5')
-const error6 = document.getElementById('error6')
 const option = document.querySelectorAll('input[type="radio"]')
+const account = document.getElementById('account-check')
+const navbutton = document.getElementById('navbutton')
 const remail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+const screenwidth = window.innerWidth
+
+// USE A LISTENER TO navbutton TO REPLACE CONTENT OF account-check
+navbutton.addEventListener('click', (e) => {
+    e.replaceChild()
+})
 
 let selected = null
 
@@ -66,3 +67,4 @@ login.addEventListener('submit', (e) => {
         }
     }
 })
+
