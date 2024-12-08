@@ -222,7 +222,7 @@
                     </ul>
                     <div class="popup-button">
                         <span class="close-btn" onclick="closePopup('popup1', 'overlay1')">Close</span> 
-                        <button class="btn btn-primary" href="agreement_transaction.html">Start Investing</button>
+                        <button class="btn btn-primary" href="agreement_transaction.html" id="startInvestingButton">Start Investing</button>
                     </div>
                 </div>
             </div>
@@ -244,7 +244,7 @@
                     <p>Date of Creation: 15 April, 2019</p>
                     <div class="popup-button">
                         <span class="close-btn" onclick="closePopup('popup2', 'overlay2')">Close</span>
-                        <button class="btn btn-primary" href="agreement_transaction.html">Start Investing</button>
+                        <button class="btn btn-primary" href="agreement_transaction.html" id="startInvestingButton2">Start Investing</button>
                     </div>
                 </div>
             </div>
@@ -266,7 +266,7 @@
                     <p>Date of Creation: 10 March, 2020</p>
                     <div class="popup-button">
                         <span class="close-btn" onclick="closePopup('popup3', 'overlay3')">Close</span>
-                        <button class="btn btn-primary" href="agreement_transaction.html">Start Investing</button>
+                        <button class="btn btn-primary" href="agreement_transaction.html" id="startInvestingButton3">Start Investing</button>
                     </div>
                 </div>
             </div>
@@ -288,7 +288,7 @@
                     <p>Date of Creation: 5 December, 2021</p>
                     <div class="popup-button">
                         <span class="close-btn" onclick="closePopup('popup3', 'overlay3')">Close</span>
-                        <button class="btn btn-primary" href="#">Start Investing</button>
+                        <button class="btn btn-primary" href="agreement_transaction.html" id="startInvestingButton4">Start Investing</button>
                     </div>
                 </div>
             </div>
@@ -310,7 +310,7 @@
                     <p>Date of Creation: 12 July, 2022</p>
                     <div class="popup-button">
                         <span class="close-btn" onclick="closePopup('popup3', 'overlay3')">Close</span>
-                        <button class="btn btn-primary" href="#">Start Investing</button>
+                        <button class="btn btn-primary" href="agreement_transaction.html" id="startInvestingButton5">Start Investing</button>
                     </div>
                 </div>
             </div>
@@ -402,5 +402,24 @@
             document.body.style.height = "auto";
             document.body.style.overflowY = "scroll";
         }
+        document.getElementById("startInvestingButton").addEventListener("click", function() {
+            window.location.href = "agreement_transaction.html";
+        });
+
+        document.getElementById("startInvestingButton2").addEventListener("click", function() {
+            window.location.href = "agreement_transaction.html";
+        });
+
+        document.getElementById("startInvestingButton3").addEventListener("click", function() {
+            window.location.href = "agreement_transaction.html";
+        });
+
+        document.getElementById("startInvestingButton4").addEventListener("click", function() {
+            window.location.href = "agreement_transaction.html";
+        });
+
+        document.getElementById("startInvestingButton5").addEventListener("click", function() {
+            window.location.href = "agreement_transaction.html";
+        });
     </script>
 </html>

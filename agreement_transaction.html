@@ -82,10 +82,6 @@
             <h1>Agreement Page</h1>
         </div> 
     </div>
-    <div class="agreement-container">
-        <h1>Agreement Details</h1>
-        <p id="agreement-content">Loading agreement...</p>
-    </div>
     <div class="content">
         <div class="agreement-section">
             <h2>Our Business Goals</h2>
@@ -182,6 +178,9 @@
         </div>
     </footer>
     <script>
+        document.getElementById("startInvestingButton").addEventListener("click", function () {
+            window.location.href = "agreement_transaction.html";
+        });
     </script>
 </body>
 </html>
