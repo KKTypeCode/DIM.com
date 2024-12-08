@@ -182,25 +182,6 @@
         </div>
     </footer>
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const business = urlParams.get('business');
-
-        // Define the agreement content for each business
-        const agreements = {
-            business1: "This is the agreement content for Business 1. Please review the terms and conditions before investing.",
-            business2: "This is the agreement content for Business 2. Make sure you understand all the details before proceeding.",
-            business3: "This is the agreement content for Business 3. Carefully read the agreement before making any decisions."
-        };
-
-        // Display the appropriate agreement content
-        document.addEventListener('DOMContentLoaded', () => {
-            const agreementSection = document.getElementById('agreement-content');
-            if (business && agreements[business]) {
-                agreementSection.innerText = agreements[business];
-            } else {
-                agreementSection.innerText = "No agreement found for the selected business.";
-            }
-        });
     </script>
 </body>
 </html>
