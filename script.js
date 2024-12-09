@@ -7,15 +7,7 @@ const error1 = document.getElementById('error1')
 const error2 = document.getElementById('error2')
 const error3 = document.getElementById('error3')
 const option = document.querySelectorAll('input[type="radio"]')
-const account = document.getElementById('account-check')
-const navbutton = document.getElementById('navbutton')
 const remail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
-const screenwidth = window.innerWidth
-
-// USE A LISTENER TO navbutton TO REPLACE CONTENT OF account-check
-navbutton.addEventListener('click', (e) => {
-    e.replaceChild()
-})
 
 let selected = null
 
