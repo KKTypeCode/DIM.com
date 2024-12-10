@@ -139,7 +139,7 @@
             </div>
         </nav>  
         <div class="form-block col-md-4 mb-4">
-            <form class="user-block" id="signin" action="/DIM.com/home.html" method="GET">
+            <form class="user-block" id="signin" action="home.html" method="GET">
                 <h2>Sign In</h2>
                 <div class="second-method">
                     <a href="market.html" class="btn btn-secondary connect-to-button">
@@ -156,9 +156,9 @@
                     <input id="userid" type="text" placeholder="Insert username/email">
                 </div>
                 <div id='error1' class="errormsg"></div>
-                <h5 class="formlabel" for="password">Password</h5>
+                <h5 class="formlabel" for="passwordup">Password</h5>
                 <div class="inputbox1">
-                    <input id="password" type="password" placeholder="Insert your password">
+                    <input id="passwordup" type="password" placeholder="Insert your password">
                 </div>
                 <div id='error2' class="errormsg"></div>
                 <div class="radio-select" style="margin-top:5px;">
@@ -170,7 +170,7 @@
                     <label class="formchoice" for="businesses">Businesses</label>
                 </div>
                 <div id='error3' class="errormsg"></div>
-                <button type='submit' class="btn btn-primary submit" href="/DIM.com/market.html">Sign In</button>
+                <button type='button' class="btn btn-primary submit" onclick="window.location.href='market.html'">Sign In</button>
                 <div class="sign-up-anchor"><a href="signup.html">Or do you want to sign up?</a></div>
             </form>
         </div>
