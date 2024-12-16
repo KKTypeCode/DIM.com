@@ -590,4 +590,21 @@
             </div>
         </footer>
     </body>
+    <script>
+        function showPopup(popupId, overlayId) {
+            document.getElementById(popupId).style.display = "block";
+            document.getElementById(overlayId).style.display = "block";
+            document.body.style.height = "100%";
+            document.body.style.overflowY = "hidden";
+        }
+
+        function closePopup(popupId, overlayId) {
+            document.getElementById(popupId).style.display = "none";
+            document.getElementById(overlayId).style.display = "none";
+            document.body.style.height = "auto";
+            document.body.style.overflowY = "scroll";
+        }
+
+        
+    </script>
 </html>

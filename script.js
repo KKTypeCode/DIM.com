@@ -52,10 +52,10 @@ login.addEventListener('submit', (e) => {
         error3.innerHTML = msg3.join()
         e.preventDefault()
     } else {
-        if (investor.value === true) {
-            window.location.href('dashboard_investor.html')
-        } else if (business.value === true) {
-            window.location.href('dashboard_business.html')
+        if (investor.checked) {
+            window.location.href = 'dashboard_investor.html'
+        } else if (business.checked) {
+            window.location.href = 'dashboard_business.html'
         }
     }
 })
