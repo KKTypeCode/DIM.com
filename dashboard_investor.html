@@ -131,10 +131,27 @@
                 margin: auto;
             }
             .investment-card {
-                background-color: #347deb;
+                background-color: #347DEB;
                 margin: 20px;
                 padding: 20px;
                 border-radius: 1vw;
+            }
+            .continue-to-market {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 20px;
+                border-radius: 35%;
+                cursor: pointer;
+                margin-top: 20px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .continue-to-market p {
+                font-size: 20px;
+                margin-bottom: 12px;
+                font-weight: 550;
             }
             @media (max-width: 1175px) {
                 .top-profile {
@@ -248,6 +265,11 @@
                 <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis urna eget lectus sagittis, ac bibendum lectus malesuada. Donec in ipsum id nisi luctus faucibus.</p>
             </div>
         </div>
+        <div class="line" style="margin-top: 10px;"></div>
+        <div class="continue-to-market">
+            <p>Looking for more businesses?</p>
+            <button class="btn btn-primary invest-button">Back to Market...</button>
+        </div>
         <footer>
             <div class="newfoot">
                 <div class="block1">
@@ -303,10 +325,5 @@
                 </div>
             </div>
         </footer>
-        <script>
-            document.getElementById("IAgreeButton").addEventListener("click", function () {
-            window.location.href = "dashboard_investor.html";
-        });
-        </script>
     </body>
 </html>

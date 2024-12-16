@@ -136,10 +136,18 @@
                 margin-left: auto;
                 margin-right: auto;
                 margin-bottom: 10px;
-                font-size: 1.2vw;
-                background-color: #787878;
+                font-size: clamp(10px, 1.3vw);
+                background-color: #538D4E;
                 border-radius: 1vw;
                 width: 75%;
+                min-width: 344px;
+            }
+            .invest-stat .invest-title p {
+                font-size: xx-large;
+                text-align: center;
+                font-weight: 500;
+                color: #f2f2f2;
+                margin-bottom: 1vw;
             }
             .investor-card {
                 display: flex;
@@ -154,6 +162,31 @@
             .investor-names {
                 text-align: left;
             }
+            .top-profile-display {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 23.5px auto auto;
+                width: 75%;
+                min-width: 344px;
+            }
+            .top-profile-display p {
+                font-size: xx-large;
+                margin: auto 0;
+                font-weight: 650;
+                padding-right: 5px;
+            }
+            .top-profile-display .edit-button {
+                height: 100%;
+                padding: auto;
+                margin-top: auto;
+                margin-bottom: 0;
+                background-color: #c90000;
+                font-size: 1.85vw;
+                border: 0;
+                border-radius: 25%;
+                min-width: 41px;
+            }
             .profile-display {
                 display: flex;
                 flex-direction: column;
@@ -161,12 +194,13 @@
                 align-items: left;
                 margin-left: auto;
                 margin-right: auto;
-                margin-top: 50px;
+                margin-top: 10px;
                 padding: 20px;
                 width: 80%;
+                min-width: 344px;
                 margin-bottom: 10px;
-                font-size: 1.2vw;
-                background-color: #787878;
+                font-size: clamp(10px, 1.3vw);
+                background-color: #347DEB;
                 border-radius: 1vw;
                 width: 75%;
             }
@@ -269,8 +303,8 @@
         </div>
         <div class="invest-stat">
             <div class="interested investor-card">
-                <div class="investment-infotitle">
-                    Interested Investors
+                <div class="invest-title">
+                    <p>Interested Investors</p>
                 </div>
                 <ul class="list-group investor-names">
                     <li>Victor Blackwood</li>
@@ -280,8 +314,8 @@
             </div>
             <div class="line"></div>
             <div class="awaiting investor-card">
-                <div class="investment-infotitle">
-                    Negotiating Agreements
+                <div class="invest-title">
+                    <p>Negotiating Agreements</p>
                 </div>
                 <ul class="list-group investor-names">
                     <li>Sophia Langford</li>
@@ -291,8 +325,8 @@
             </div>
             <div class="line"></div>
             <div class="accepting investor-card">
-                <div class="investment-infotitle">
-                    Investments Accepted
+                <div class="invest-title">
+                    <p>Investments Accepted</p>
                 </div>
                 <ul class="list-group investor-names">
                     <li>Elliot Braxton</li>
@@ -300,6 +334,10 @@
                     <li>Harrison Thorne</li>
                 </ul>
             </div>
+        </div>
+        <div class="top-profile-display">
+            <p>Display of Business Information</p>
+            <button class="btn btn-primary edit-button">Edit</button>
         </div>
         <div class="profile-display">
             <p><b>Name:</b> GreenSprout Farming Collective</p>
