@@ -280,6 +280,7 @@
                 align-items: center;
                 gap: 20px;
                 margin: 0 auto;
+                padding:30px    
             }
             .stat-frame {
                 background-color: #424242; 
@@ -319,6 +320,62 @@
                     grid-column: 1; /* Ensure centered box spans full width */
                     grid-row: 2; /* Place below others */
                 }
+            }
+            .projects-container {
+                width: 90%;
+                margin: 0 auto;
+                padding: 40px 0;
+                text-align: center;
+                background-color: #424242; 
+                border-radius: 10px; /
+            }
+
+            h2 {
+                font-size: 35px;
+                margin-bottom: 30px;
+                font-weight: 700;
+                color: #fff;
+            }
+
+            .projects-row {
+                display: flex;
+                justify-content: center;
+                margin: 10px 0;
+            }
+
+            .project-button {
+                background-color: #4a90e2;
+                padding: 10px 10px;
+                margin: 5px 5px 8px 5px;
+                border-radius: 20px;
+                text-align: center;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                min-width: 220px;
+            }
+
+            .project-button:hover {
+                background-color: #357ab7;
+            }
+
+            .project-button:nth-child(odd) {
+                opacity: 0.7;
+            }
+
+            .project-button:nth-child(even) {
+                opacity: 1;
+            }
+            .carousel-item {
+                padding: 10px;
+            }
+            .carousel-control-prev-icon, .carousel-control-next-icon {
+                background-color: #fff;
+                border-radius: 50%; /* Make the arrows circular */
+                width: 40px;
+                height: 40px;
+            }
+            .carousel-control-prev-icon, .carousel-control-next-icon {
+                background-color: #fff;
             }
         </style>
     </head>
@@ -388,6 +445,57 @@
                 Explore new ideas,<br>crowdfund projects, and<br>finance your future all in one platform
             </div>
         </div>
+        <div class="projects-container">
+            <h2>Top Projects this Month</h2>
+            <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- First slide with 3 rows -->
+                    <div class="carousel-item active">
+                        <div class="projects-row">
+                            <div class="project-button">Project 1</div>
+                            <div class="project-button">Project 2</div>
+                            <div class="project-button">Project 3</div>
+                        </div>
+                        <div class="projects-row">
+                            <div class="project-button">Project 4</div>
+                            <div class="project-button">Project 5</div>
+                            <div class="project-button">Project 6</div>
+                        </div>
+                        <div class="projects-row">
+                            <div class="project-button">Project 7</div>
+                            <div class="project-button">Project 8</div>
+                            <div class="project-button">Project 9</div>
+                        </div>
+                    </div>
+                    <!-- Second slide with 3 rows -->
+                    <div class="carousel-item">
+                        <div class="projects-row">
+                            <div class="project-button">Project 10</div>
+                            <div class="project-button">Project 11</div>
+                            <div class="project-button">Project 12</div>
+                        </div>
+                        <div class="projects-row">
+                            <div class="project-button">Project 13</div>
+                            <div class="project-button">Project 14</div>
+                            <div class="project-button">Project 15</div>
+                        </div>
+                        <div class="projects-row">
+                            <div class="project-button">Project 16</div>
+                            <div class="project-button">Project 17</div>
+                            <div class="project-button">Project 18</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
         <div class="stat-row">
             <!-- Card 1 -->
