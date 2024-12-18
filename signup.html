@@ -164,7 +164,6 @@
                 <div class="inputbox1">
                     <input id="passwordup" type="password" placeholder="Set your password">
                 </div>
-                <div id='error6' class="errormsg"></div>
                 <div class="radio-select" style="margin-top:5px;">
                     <input type="radio" id="investors" name="choice">
                     <label class="formchoice" for="investors">Investors</label>
@@ -173,8 +172,8 @@
                     <input type="radio" id="businesses" name="choice">
                     <label class="formchoice" for="businesses">Businesses</label>
                 </div>
-                <div id='error7' class="errormsg"></div>
-                <button type='submit' class="btn btn-primary" style="margin:20px auto;">Sign Up</button>
+                <div id="error3" class="errormsg"></div>
+                <button type="button" id="signInButton" class="btn btn-primary submit">Sign Up</button>
                 <div class="sign-up-anchor"><a href="login.html">Or do you want to sign in?</a></div>
             </form>
         </div>
@@ -239,4 +238,22 @@
             </div>
         </footer>
     </body>
+    <script>
+        document.getElementById("signInButton").addEventListener("click", function () {
+            // Get references to the radio buttons
+            const investorsRadio = document.getElementById("investors");
+            const businessesRadio = document.getElementById("businesses");
+    
+            // Check which radio button is selected and redirect accordingly
+            if (businessesRadio.checked) {
+                window.location.href = "dashboard_business.html";
+            } else if (investorsRadio.checked) {
+                // Handle other cases (e.g., investors redirect)
+                window.location.href = "dashboard_investor.html"; // Example for investors
+            } else {
+                // Show an error message if no option is selected
+                document.getElementById("error3").innerText = "Please select an option before signing in.";
+            }
+        });
+    </script>
 </html>
